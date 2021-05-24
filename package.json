@@ -16,10 +16,8 @@
     "@nuxtjs/axios": "^5.12.2",
     "autoprefixer": "^9.8.6",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
-    "nuxt-i18n": "^6.20.0",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+    "nuxt": "^2.15.6",
+    "nuxt-i18n": "^6.27.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
@@ -27,12 +25,13 @@
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/tailwindcss": "^3.1.0",
+    "@nuxtjs/tailwindcss": "^4.1.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "postcss": "^8.3.0",
     "prettier": "^2.1.2"
   }
 }

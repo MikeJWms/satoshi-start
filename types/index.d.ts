@@ -5,4 +5,3 @@ export type optionsInterface = {
   link?: string
   nav?: string
 }[]
-

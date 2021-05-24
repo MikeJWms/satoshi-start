@@ -87,7 +87,6 @@
 import Vue from 'vue'
 import { optionsInterface } from '@/types/index'
 
-
 export default Vue.extend({
   data() {
     return {
@@ -98,7 +97,7 @@ export default Vue.extend({
   props: {
     options: {
       type: Array as () => optionsInterface,
-      default: [],
+      default: () => [{ lable: 'null', type: 'link', link: '/' }],
     },
     defaultDisplay: {
       type: String,
@@ -127,7 +126,7 @@ export default Vue.extend({
       if (!this.$el.contains(e.target)) {
         this.open = false
       }
-    }
-  }
+    },
+  },
 })
 </script>

@@ -1,9 +1,8 @@
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  generate: {
-    dir: 'docs'
-  },
+  ssr: false, // Disable Server Side rendering
+  generate: { dir: 'docs' },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
