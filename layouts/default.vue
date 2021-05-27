@@ -1,7 +1,9 @@
 <template>
   <div>
     <NavBar />
-    <Nuxt />
+    <div class="min-h-screen">
+      <Nuxt />
+    </div>
     <Footer />
   </div>
 </template>

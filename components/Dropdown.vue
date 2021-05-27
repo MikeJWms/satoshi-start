@@ -85,7 +85,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { optionsInterface } from '@/types/index'
+import { OptionsInterface } from '@/types/index'
 
 export default Vue.extend({
   data() {
@@ -96,7 +96,7 @@ export default Vue.extend({
   },
   props: {
     options: {
-      type: Array as () => optionsInterface,
+      type: Array as () => OptionsInterface,
       default: () => [{ lable: 'null', type: 'link', link: '/' }],
     },
     defaultDisplay: {

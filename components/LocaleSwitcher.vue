@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { optionsInterface } from '@/types/index'
+import { OptionsInterface } from '@/types/index'
 
 export default Vue.extend({
   data() {
     return {
-      options: <optionsInterface>[],
+      options: [] as OptionsInterface[],
     }
   },
   computed: {
