@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/es-us", {data:[{}],fetch:[{cryptoPrices:{symbol:"BTCTUSD",price:"50333.92000000"},poll:0}],mutations:void 0});

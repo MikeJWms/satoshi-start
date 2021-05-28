@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="max-w-7xl mx-auto">
     <!-- <NuxtLink to="/testPage">Test Page</NuxtLink> -->
