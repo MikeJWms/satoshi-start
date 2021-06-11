@@ -26,6 +26,11 @@ export const getters: GetterTree<BTCPriceStore, RootState> = {
 	satTo100Usd: function (state, getters): string {
 		return (100 / getters.satToUsd).toFixed(0)
 	},
+	btcPriceHistory: function (state, getters): { x: Date, y: number }[] {
+		return state.btcPrices.map((price) => {
+			return { x: price.timestamp, y: price.price }
+		})
+	}
 }
 
 export const mutations: MutationTree<BTCPriceStore> = {

@@ -13,6 +13,7 @@ export default {
 			satTo1Usd: 'btcPrice/satTo1Usd',
 			satTo10Usd: 'btcPrice/satTo10Usd',
 			satTo100Usd: 'btcPrice/satTo100Usd',
+			btcPriceHistory: 'btcPrice/btcPriceHistory'
 		}),
 	},
 	methods: {
