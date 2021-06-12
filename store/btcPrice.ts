@@ -1,6 +1,8 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import { RootState } from '~/store'
 import { BTCPrice } from '~/types/index'
+import dayjs from 'dayjs'
+
 
 export const state = () => ({
 	btcPrices: [] as BTCPrice[],
@@ -26,9 +28,9 @@ export const getters: GetterTree<BTCPriceStore, RootState> = {
 	satTo100Usd: function (state, getters): string {
 		return (100 / getters.satToUsd).toFixed(0)
 	},
-	btcPriceHistory: function (state, getters): { x: Date, y: number }[] {
+	btcPriceHistory: function (state, getters): { x: any, y: number }[] {
 		return state.btcPrices.map((price) => {
-			return { x: price.timestamp, y: price.price }
+			return { x: dayjs(price.timestamp).format('h:mm:ss a'), y: price.price / 100000000 }
 		})
 	}
 }

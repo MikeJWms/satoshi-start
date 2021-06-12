@@ -32,10 +32,30 @@ export default Vue.extend({
       },
       series: [
         {
-          name: 'Price ($, USD)',
+          name: 'Price (USD / Satoshi)',
           data: [],
         },
       ],
+      yaxis: {
+        labels: {
+          formatter: (value) => {
+            return `${(value / 100).toFixed(10)}¢`
+          },
+          title: {
+            text: 'Price',
+          },
+        },
+      },
+      xaxis: {
+        labels: {
+          show: false,
+          hideOverlappingLabels: true,
+          showDuplicates: false,
+        },
+        title: {
+          text: 'Time',
+        },
+      },
     }
 
     this.chart = new ApexCharts(document.querySelector('#chart'), options)

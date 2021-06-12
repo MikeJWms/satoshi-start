@@ -14,7 +14,8 @@
           <satoshi-ticker />
         </template>
       </Card>
-      <Card class="col-span-2">
+      <Card class="md:col-span-2">
+        <template v-slot:title><h2>Real-Time Price</h2></template>
         <template v-slot:content>
           <PriceChart class="w-full max-h-96" />
         </template>
