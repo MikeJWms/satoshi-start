@@ -2,12 +2,27 @@
   <div class="relative inline-block text-left" @blur="open = false">
     <div>
       <button
-        type="button"
-        @click="toggleDropdown"
-        class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-offset-gray-100 focus:ring-indigo-500"
         id="options-menu"
+        type="button"
+        class="
+          inline-flex
+          justify-center
+          w-full
+          rounded-md
+          border border-gray-300
+          shadow-sm
+          px-4
+          py-2
+          bg-white
+          text-sm
+          font-medium
+          text-gray-700
+          hover:bg-gray-50
+          focus:outline-none focus:ring-offset-gray-100 focus:ring-indigo-500
+        "
         aria-haspopup="true"
         aria-expanded="true"
+        @click="toggleDropdown"
       >
         <span>
           {{ displayValue }}
@@ -39,7 +54,17 @@
     >
       <div
         v-show="open"
-        class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+        class="
+          origin-top-right
+          absolute
+          right-0
+          mt-2
+          w-56
+          rounded-md
+          shadow-lg
+          bg-white
+          ring-1 ring-black ring-opacity-5
+        "
       >
         <div
           class="py-1"
@@ -52,22 +77,44 @@
               v-if="option.type == 'link'"
               :href="option.link"
               target="_blank"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              class="
+                block
+                px-4
+                py-2
+                text-sm text-gray-700
+                hover:bg-gray-100 hover:text-gray-900
+              "
               role="menuitem"
               >{{ option.label }}</a
             >
             <button
               v-if="option.type == 'button'"
-              @click="select(option)"
-              class="block px-4 py-2 text-sm w-full text-left focus:outline-none text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              class="
+                block
+                px-4
+                py-2
+                text-sm
+                w-full
+                text-left
+                focus:outline-none
+                text-gray-700
+                hover:bg-gray-100 hover:text-gray-900
+              "
               role="menuitem"
+              @click="select(option)"
             >
               {{ option.label }}
             </button>
             <nuxt-link
               v-if="option.type == 'nav'"
               :to="localePath(option.nav)"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              class="
+                block
+                px-4
+                py-2
+                text-sm text-gray-700
+                hover:bg-gray-100 hover:text-gray-900
+              "
               role="menuitem"
               >{{ option.label }}</nuxt-link
             >
@@ -88,12 +135,6 @@ import Vue from 'vue'
 import { OptionsInterface } from '@/types/index'
 
 export default Vue.extend({
-  data() {
-    return {
-      open: false,
-      displayValue: 'null',
-    }
-  },
   props: {
     options: {
       type: Array as () => OptionsInterface,
@@ -103,6 +144,12 @@ export default Vue.extend({
       type: String,
       default: 'Please Select...',
     },
+  },
+  data() {
+    return {
+      open: false,
+      displayValue: 'null',
+    }
   },
   created() {
     this.displayValue = this.defaultDisplay

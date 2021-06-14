@@ -2,8 +2,8 @@
   <Dropdown
     :options="locales"
     :defaultDisplay="activeLocale"
-    @selected="changeLocalization"
     class="z-30"
+    @selected="changeLocalization"
   />
 </template>
 
@@ -18,7 +18,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    locales: function () {
+    locales() {
       if (this.$i18n.locales) {
         console.log('Locals', this.$i18n.locales)
         const mappable = this.$i18n.locales
@@ -30,8 +30,9 @@ export default Vue.extend({
           }
         })
       }
+      return null
     },
-    activeLocale: function () {
+    activeLocale() {
       console.log(this.$i18n.localeProperties)
       return this.$i18n.localeProperties.title
     },
@@ -39,7 +40,7 @@ export default Vue.extend({
   methods: {
     changeLocalization(val: { label: string; value?: string | number }) {
       if (val.value) {
-        this.$i18n.setLocale(<string>val.value)
+        this.$i18n.setLocale(val.value)
       }
     },
   },
