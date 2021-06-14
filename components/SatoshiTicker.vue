@@ -57,15 +57,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import btcPriceServiceSubscriber from '~/mixins/btcPriceServiceSubscriber.mixin'
-// import { mapGetters } from 'vuex'
-
-interface btcPriceObj {
-  price?: string
-  symbol?: string
-}
 
 export default Vue.extend({
-  name: 'satoshiTicker',
+  name: 'SatoshiTicker',
   mixins: [btcPriceServiceSubscriber],
 })
 </script>

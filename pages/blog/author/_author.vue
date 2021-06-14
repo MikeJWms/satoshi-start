@@ -1,5 +1,5 @@
 <template>
-  
+  <div></div>
 </template>
 
 <script lang="ts">
@@ -9,15 +9,15 @@ export default Vue.extend({
     const articles = await $content('articles', params.slug)
       .where({
         'author.name': {
-          $regex: [params.author, 'i']
-        }
+          $regex: [params.author, 'i'],
+        },
       })
       .without('body')
       .sortBy('createdAt', 'asc')
       .fetch()
     return {
-      articles
+      articles,
     }
-  }
+  },
 })
 </script>

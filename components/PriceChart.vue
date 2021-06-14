@@ -3,15 +3,20 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
 import ApexCharts from 'apexcharts'
 import btcPriceServiceSubscriber from '~/mixins/btcPriceServiceSubscriber.mixin'
 
-import Vue from 'vue'
 export default Vue.extend({
-  name: 'priceChart',
+  name: 'PriceChart',
   mixins: [btcPriceServiceSubscriber],
+  data() {
+    return {
+      chart: null,
+    }
+  },
   watch: {
-    btcPriceHistory: function (newVal) {
+    btcPriceHistory(newVal) {
       console.log(newVal)
       this.chart.updateSeries([
         {
@@ -20,13 +25,8 @@ export default Vue.extend({
       ])
     },
   },
-  data() {
-    return {
-      chart: null,
-    }
-  },
   mounted() {
-    var options = {
+    const options = {
       chart: {
         type: 'line',
       },

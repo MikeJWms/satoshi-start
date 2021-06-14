@@ -29,6 +29,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
   props: {
     number: {
@@ -41,7 +42,7 @@ export default Vue.extend({
     },
     subTitles: {
       type: [Array, Object],
-      default: [''],
+      default: () => [''],
     },
   },
 })

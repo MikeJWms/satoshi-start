@@ -18,11 +18,11 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
 import btcPriceServiceSubscriber from '~/mixins/btcPriceServiceSubscriber.mixin'
 
-import Vue from 'vue'
 export default Vue.extend({
-  name: 'satoshiIntro',
+  name: 'SatoshiIntro',
   mixins: [btcPriceServiceSubscriber],
 })
 </script>
