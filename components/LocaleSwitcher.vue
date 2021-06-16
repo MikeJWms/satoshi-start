@@ -1,7 +1,7 @@
 <template>
   <Dropdown
     :options="locales"
-    :defaultDisplay="activeLocale"
+    :default-display="activeLocale"
     class="z-30"
     @selected="changeLocalization"
   />
