@@ -47,7 +47,7 @@ export default {
     locales:
       [
         { code: 'en-us', iso: 'en-US', country: 'us', title: 'English, USA' },
-        { code: 'es-us', iso: 'es-MX', country: 'us', title: 'Spanish, USA' }
+        { code: 'es-us', iso: 'es-MX', country: 'us', title: 'Español, USA' }
       ],
     defaultLocale: 'en-us',
     vueI18nLoader: true,
