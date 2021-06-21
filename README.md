@@ -1,20 +1,45 @@
-# satoshi-start
+# SatoshiStart.com
 
-## Build Setup
+A brief introduction to the Satoshi, the smallest unit of Bitcoin.
+
+## Demo
+
+[Check out the website](https://satoshistart.com)
+
+## Tech Stack
+
+**Client:** NuxtJS, VueX, TailwindCSS
+
+**Server:** Static files generated with NuxtJS and hosted on github pages
+
+## Features
+
+- Live Satoshi / USD conversions
+- Real-time price chart
+- Multi-language support
+
+## Run Locally
+
+Clone the project
 
 ```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+  git clone https://github.com/MikeJWms/satoshi-start
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Go to the project directory
+
+```bash
+  cd satoshi-start
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
